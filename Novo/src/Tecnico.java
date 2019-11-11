@@ -2,7 +2,6 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 @Entity
-@DiscriminatorValue(value = "T")
 public class Tecnico extends Pessoa implements Identificavel {
 	private String curso;
 
