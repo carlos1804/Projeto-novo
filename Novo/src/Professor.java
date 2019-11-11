@@ -2,7 +2,7 @@ import javax.persistence.Entity;
 import javax.persistence.PrimaryKeyJoinColumn;
 
 @Entity
-@PrimaryKeyJoinColumn(name="idPessoa")
+@PrimaryKeyJoinColumn(name="id")
 public class Professor extends Pessoa implements Identificavel {
 	private String disciplina;
 
