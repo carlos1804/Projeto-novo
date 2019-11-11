@@ -1,8 +1,9 @@
-import javax.persistence.DiscriminatorValue;
+
 import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
 
 @Entity
-@DiscriminatorValue(value = "T")
+@PrimaryKeyJoinColumn(name="id")
 public class Tecnico extends Pessoa implements Identificavel {
 	private String curso;
 

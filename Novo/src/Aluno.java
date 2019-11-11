@@ -1,8 +1,9 @@
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
 
 @Entity
-@DiscriminatorValue(value = "A")
+@PrimaryKeyJoinColumn(name="id")
 public class Aluno extends Pessoa implements Identificavel {
 
 	private int matricula;
