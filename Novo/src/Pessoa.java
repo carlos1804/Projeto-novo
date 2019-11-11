@@ -1,7 +1,6 @@
 import javax.persistence.Column;
 	import javax.persistence.DiscriminatorColumn;
 	import javax.persistence.DiscriminatorType;
-	import javax.persistence.DiscriminatorValue;
 	import javax.persistence.Entity;
 	import javax.persistence.GeneratedValue;
 	import javax.persistence.GenerationType;
@@ -21,11 +20,11 @@ public abstract class Pessoa implements Identificavel {
 	@Column(insertable = false, updatable = false)
 	private String tipo;
 	private String email;
-	private String endereço;
+	private String endereco;
 
 	@Override
 	public String toString() {
-		return "Pessoa [Nome=" + Nome + ", CPF=" + CPF + ", id=" + id + ", email=" + email + ", endereço=" + endereço
+		return "Pessoa [Nome=" + Nome + ", CPF=" + CPF + ", id=" + id + ", email=" + email + ", endereco=" + endereco
 				+ "]";
 	}
 
@@ -61,12 +60,12 @@ public abstract class Pessoa implements Identificavel {
 		this.email = email;
 	}
 
-	public String getEndereço() {
-		return endereço;
+	public String getEndereco() {
+		return endereco;
 	}
 
-	public void setEndereço(String endereço) {
-		this.endereço = endereço;
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
 	}
 
 }
