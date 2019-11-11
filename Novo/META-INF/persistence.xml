@@ -11,7 +11,7 @@
 		<properties>
 			<!-- Propriedades da conexão com o Banco de Dados -->
 			<property name="javax.persistence.jdbc.url"
-				value="jdbc:postgresql://192.168.4.118:5432/carlos_hellen_J" />
+				value="jdbc:postgresql://192.168.4.118:5432/carlos_hellen_TB" />
 			<property name="javax.persistence.jdbc.user" value="poobd" />
 			<property name="javax.persistence.jdbc.password"
 				value="poobd" />

@@ -1,16 +1,13 @@
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
 @Entity
-@Inheritance(strategy = InheritanceType.JOINED)
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class Pessoa implements Identificavel {
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
 	private String Nome;
 	private Long CPF;
 	private Long id;

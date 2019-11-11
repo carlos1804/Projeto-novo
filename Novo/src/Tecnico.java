@@ -1,9 +1,6 @@
 
 import javax.persistence.Entity;
-import javax.persistence.PrimaryKeyJoinColumn;
-
 @Entity
-@PrimaryKeyJoinColumn(name="id")
 public class Tecnico extends Pessoa implements Identificavel {
 	private String curso;
 
