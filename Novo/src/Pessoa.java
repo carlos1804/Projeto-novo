@@ -14,6 +14,7 @@ import javax.persistence.Column;
 	@DiscriminatorColumn(name = "tipo", length = 1, discriminatorType = DiscriminatorType.STRING)
 public abstract class Pessoa implements Identificavel {
 	@Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String Nome;
 	private Long CPF;
 	private Long id;
