@@ -1,5 +1,7 @@
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
@@ -8,18 +10,18 @@ import javax.persistence.InheritanceType;
 @Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Pessoa implements Identificavel {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private String Nome;
 	private Long CPF;
 	private Long id;
 	@Column(insertable = false, updatable = false)
 	private String tipo;
 	private String email;
-	private String endereço;
+	private String endereco;
 
 	@Override
 	public String toString() {
-		return "Pessoa [Nome=" + Nome + ", CPF=" + CPF + ", id=" + id + ", email=" + email + ", endereço=" + endereço
+		return "Pessoa [Nome=" + Nome + ", CPF=" + CPF + ", id=" + id + ", email=" + email + ", endereco=" + endereco
 				+ "]";
 	}
 
@@ -55,12 +57,12 @@ public abstract class Pessoa implements Identificavel {
 		this.email = email;
 	}
 
-	public String getEndereço() {
-		return endereço;
+	public String getEndereco() {
+		return endereco;
 	}
 
-	public void setEndereço(String endereço) {
-		this.endereço = endereço;
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
 	}
 
 }
