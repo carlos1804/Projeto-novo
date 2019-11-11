@@ -17,4 +17,10 @@ public class Professor extends Pessoa implements Identificavel {
 		this.disciplina = disciplina;
 	}
 
+	@Override
+	public void setId(Long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

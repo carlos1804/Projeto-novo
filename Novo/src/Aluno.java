@@ -27,4 +27,10 @@ public class Aluno extends Pessoa implements Identificavel {
 		this.curso = curso;
 	}
 
+	@Override
+	public void setId(Long id) {
+		// TODO Auto-generated method stub
+
+	}
+
 }

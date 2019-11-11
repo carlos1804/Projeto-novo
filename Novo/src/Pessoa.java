@@ -15,11 +15,11 @@ import javax.persistence.InheritanceType;
 @DiscriminatorValue("P")
 public abstract class Pessoa implements Identificavel {
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String Nome;
 	private Long CPF;
 	private Long id;
-	@Column(insertable=false, updatable=false)
+	@Column(insertable = false, updatable = false)
 	private String tipo;
 	private String email;
 	private String endereço;
@@ -42,16 +42,16 @@ public abstract class Pessoa implements Identificavel {
 		return CPF;
 	}
 
-	public void setCPF(Long cPF) {
-		CPF = cPF;
+	public void setCPF(int i) {
+		CPF = (long) i;
 	}
 
 	public Long getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setId(double d) {
+		this.id = (long) d;
 	}
 
 	public String getEmail() {
