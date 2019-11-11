@@ -8,7 +8,6 @@ import javax.persistence.InheritanceType;
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class Pessoa implements Identificavel {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String Nome;
 	private Long CPF;
 	private Long id;
