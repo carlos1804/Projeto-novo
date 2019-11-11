@@ -1,0 +1,20 @@
+import javax.persistence.Entity;
+
+@Entity
+public class Tecnico extends Pessoa implements Identificavel  {
+	private String curso;
+
+	@Override
+	public String toString() {
+		return "Tecnico [curso=" + curso + "]";
+	}
+
+	public String getCurso() {
+		return curso;
+	}
+
+	public void setCurso(String curso) {
+		this.curso = curso;
+	}
+
+}
